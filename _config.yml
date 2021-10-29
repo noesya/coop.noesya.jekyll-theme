@@ -5,7 +5,7 @@ description: "La coopérative noesya s’engage pour un numérique de grande qua
 email: "contact@noesya.coop"
 lang: fr
 
-# theme: noesya
+theme: jekyll-theme-noesya
 
 exclude:
   - noesya.gemspec
