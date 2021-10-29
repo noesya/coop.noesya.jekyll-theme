@@ -1,14 +1,3 @@
-primary:
-  - title: Communs numériques
-    url: /communs-numeriques
-  - title: Sites éco-conçus
-    url: /sites-eco-concus
-  - title: Expériences interactives
-    url: /experiences-interactives
-  - title: Équipe
-    url: /equipe
-  - title: Engagements
-    url: /engagements
 legal:
   - title: Mentions légales
     url: /mentions-legales
