@@ -4,7 +4,11 @@ baseline: "Coopérative de développeurs"
 email: "contact@noesya.coop"
 lang: fr
 
-theme: noesya
+# theme: noesya
+
+exclude:
+  - noesya.gemspec
+  - LICENSE
 
 defaults:
   -
