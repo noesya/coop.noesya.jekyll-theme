@@ -1,0 +1,63 @@
+main.metier
+    header
+        @include grid(12)
+        h1
+            grid-column: 1/9
+        & + section
+            @include media-breakpoint-up(md)
+                margin-bottom: $grid-gutter * 2
+    article
+        @include grid(12)
+        align-items: flex-start
+        margin-bottom: $grid-gutter * 2
+        picture
+            display: block
+            grid-column: 1/4
+            grid-row: 1/5
+            margin-bottom: 10px
+            @include media-breakpoint-up(md)
+                margin-bottom: 0
+            img
+                display: block
+                filter: grayscale(1)
+                transition: 0.33s $easeInOutQuad
+        h3
+            font-family: $font-family-serif
+            font-size: px2rem(25)
+            margin-bottom: 10px
+        h3, p, a
+            grid-column: 4/9
+        p
+            color: $secondary
+            font-size: px2rem(22)
+            line-height: px2rem(36)
+            margin-bottom: 10px
+            @include media-breakpoint-up(md)
+                transition: color .3s ease
+                .is-menu-opened &
+                    color: $secondary-reverse
+
+        &:last-of-type
+            margin-bottom: $grid-gutter * 3
+
+        // Bloc de contact avec photo
+        & + div
+            @include grid(12)
+            align-items: center
+            padding-top: $grid-gutter * 2
+            picture
+                display: block
+                grid-column: 1/2
+                margin-bottom: 10px
+                width: 150px
+                @include media-breakpoint-up(md)
+                    margin-bottom: 0
+                    max-width: 100%
+                img
+                    display: block
+            p
+                grid-column: 2/12
+                margin-bottom: 0
+        &:hover
+            img
+                filter: grayscale(0)

@@ -1,0 +1,45 @@
+url: "https://www.noesya.coop"
+title: "noesya"
+baseline: "Coopérative de développeurs"
+email: "contact@noesya.coop"
+lang: fr
+
+theme: noesya
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+collections:
+  pages:
+    output: true
+
+plugins:
+  - jekyll-minifier
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+  load_paths:
+      - _sass
+      - node_modules
+
+jekyll-minifier:
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_intertag_spaces: false
+  remove_comments: true
+  compress_css: false
+  compress_javascript: true
+
+picture:
+  ignore_missing_images: true
