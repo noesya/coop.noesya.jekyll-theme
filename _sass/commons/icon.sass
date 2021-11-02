@@ -1,0 +1,41 @@
+@mixin icon
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    display: inline-block
+    font-family: 'icons' !important
+    font-style: normal
+    font-variant: normal
+    font-weight: normal
+    line-height: 1
+    speak: never
+    text-transform: none
+
+.icon::before
+    @include icon
+
+.icon-link-blank::before
+    content: "\e900"
+
+.icon-link::before
+    content: "\e901"
+
+.icon-download::before
+    content: "\e902"
+
+.icon-document::before
+    content: "\e903"
+
+.icon-strategique::before
+    content: "\e904"
+
+.icon-ecologique::before
+    content: "\e905"
+
+.icon-juridique::before
+    content: "\e906"
+
+.icon-economique::before
+    content: "\e907"
+
+.icon-ethique::before
+    content: "\e908"
