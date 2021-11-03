@@ -3,6 +3,7 @@ $icons: ("link-blank": "\e900", "link": "\e901", "download": "\e902", "document"
 @mixin icon
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
+    content: ''
     display: inline-block
     font-family: 'icons' !important
     font-style: normal
@@ -12,10 +13,8 @@ $icons: ("link-blank": "\e900", "link": "\e901", "download": "\e902", "document"
     speak: never
     text-transform: none
 
-@each $icon in $icons
-    .icon--#{$icon}
+@each $name, $glyph in $icons
+    .icon--#{$name}
         &::before
-            content: #{$icon}
-
-.icon::before
-    @include icon
+            @include icon
+            content: $glyph
