@@ -1,3 +1,5 @@
+$theme-colors: ("link-blank": "\e900", "link": "\e901", "download": "\e902", "download": "\e902", "document": "\e903", "ecologique-thin": "\e905", "economique-thin": "\e907", "ethique-thin": "\e908", "juridique-thin": "\e906", "strategique-thin": "\e904", "ecologique": "\e909", "economique": "\e90a", "ethique": "\e90b", "juridique": "\e90c", "strategique": "\e90d")
+
 @mixin icon
     -moz-osx-font-smoothing: grayscale
     -webkit-font-smoothing: antialiased
@@ -10,32 +12,10 @@
     speak: never
     text-transform: none
 
+@each $icon in $icons
+    .icon--#{$icon}
+        &::before
+            content: #{$icon}
+
 .icon::before
     @include icon
-
-.icon-link-blank::before
-    content: "\e900"
-
-.icon-link::before
-    content: "\e901"
-
-.icon-download::before
-    content: "\e902"
-
-.icon-document::before
-    content: "\e903"
-
-.icon-strategique::before
-    content: "\e904"
-
-.icon-ecologique::before
-    content: "\e905"
-
-.icon-juridique::before
-    content: "\e906"
-
-.icon-economique::before
-    content: "\e907"
-
-.icon-ethique::before
-    content: "\e908"
