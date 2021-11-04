@@ -2,7 +2,7 @@
   <ul>
     {% for item in site.data.menus.primary %}
       <li>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        <a href="{{ item.url }}"{% if page.url contains item.url %} class="active"{% endif %}>{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>
