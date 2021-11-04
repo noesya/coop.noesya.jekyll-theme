@@ -20,6 +20,9 @@
       {{ content }}
     </main>
     {% include footer.html %}
-    <script src="/assets/js/main.js" async defer></script>
+
+    {% unless site.options.no_js %}
+      <script src="/assets/js/main.js" async defer></script>
+    {% endunless %}
   </body>
 </html>

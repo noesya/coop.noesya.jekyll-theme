@@ -7,6 +7,13 @@ lang: fr
 
 #theme: jekyll-theme-noesya
 
+options:
+  menu_burger: true
+  notes: true # Needed to use notes in sections-with-notes includes
+  paragraphs_index: true # Needed to add index to paragraphs
+  hover_navigation_links: true # Needed to use nav-between-pages
+  no_js: false
+
 exclude:
   - noesya.gemspec
   - LICENSE

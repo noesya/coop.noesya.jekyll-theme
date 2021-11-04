@@ -2,4 +2,20 @@
 layout:
 ---
 
-{% include js/menu.js %}
+{%- if site.options.menu_burger -%}
+    {% include js/menu-burger.js %}
+{%- endif -%}
+
+{%- if site.options.notes -%}
+    {% include js/notes.js %}
+{%- endif -%}
+
+{%- if site.options.paragraphs_index -%}
+    {% include js/paragraphs-index.js %}
+{%- endif -%}
+
+{%- if site.options.hover_navigation_links -%}
+    {% include js/hover-navigation-links.js %}
+{%- endif -%}
+
+
