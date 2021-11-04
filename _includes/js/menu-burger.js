@@ -10,6 +10,7 @@ window.menu = {
 
         setTimeout(function () {
             document.body.classList.remove('is-loading');
+            window.addEventListener('resize', this.resize.bind(this));
         }.bind(this), 100);
     },
     bind: function () {
@@ -37,6 +38,11 @@ window.menu = {
         }
 
         this.y = y;
+    },
+    resize: function () {
+        'use strict';
+        document.documentElement.classList.remove('is-menu-opened');
+        this.dom.classList.remove('is-hidden');
     }
 };
 

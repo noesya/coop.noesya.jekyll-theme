@@ -1,5 +1,7 @@
 body > header
     @include container
+    align-items: center
+    display: flex
     left: 0
     padding-top: $grid-sm-margin * 2
     position: fixed
@@ -16,12 +18,14 @@ body > header
             margin-left: -2px
     > a
         display: inline-block
+        flex-shrink: 0
         position: relative
         transition: filter .3s ease
         vertical-align: middle
         z-index: 1
         & + em
             display: inline-block
+            flex-shrink: 0
             font-size: px2rem(25)
             margin-left: $grid-gutter
             margin-top: -2px
