@@ -61,3 +61,19 @@ main > nav
             &::before
                 left: -$grid-gutter
                 right: auto
+
+    @media (prefers-color-scheme: dark)
+        background-color: $bg-secondary-color-reverse
+        span
+            color: $secondary-reverse
+        li+li::after
+            background: $border-color-reverse
+        @include media-breakpoint-down(md)
+            ul li:first-child
+                border-bottom-color: $border-color-reverse
+        @include media-breakpoint-up(md)
+            .is-menu-opened &
+                background-color: $bg-secondary-color
+            span
+                .is-menu-opened &
+                    color: $secondary
