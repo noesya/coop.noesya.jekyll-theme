@@ -2,9 +2,7 @@
 layout:
 ---
 
-{%- if site.options.menu_burger -%}
-    {% include js/menu-burger.js %}
-{%- endif -%}
+{% include js/menu-burger.js %}
 
 {%- if site.options.notes -%}
     {% include js/notes.js %}
@@ -17,5 +15,3 @@ layout:
 {%- if site.options.hover_navigation_links -%}
     {% include js/hover-navigation-links.js %}
 {%- endif -%}
-
-

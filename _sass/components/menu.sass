@@ -31,6 +31,9 @@
     @include media-breakpoint-up(md)
         right: 35px
         top: 35px
+    @include media-breakpoint-up(lg)
+        .menu_burger_only_mobile &
+            display: none
     i, &::after, &::before
         background: $primary
         content: ''
@@ -84,6 +87,33 @@
         width: calc(50vw + min(1040px, calc(100vw - 390px)) / 2)
     @include media-breakpoint-up(lg)
         width: calc(50vw + min(1010px, calc((100vw - 100px) * (10/12) - 110px)) / 2)
+        .menu_burger_only_mobile &
+            background: transparent
+            margin-left: auto
+            padding-top: 0
+            position: static
+            transform: none
+            transition: none
+            width: auto
+            ul
+                display: flex
+                margin: 0
+                &:hover
+                    a
+                        color: $primary
+            li
+                font-size: px2rem(25)
+                margin-bottom: 0
+                &:not(:first-child)
+                    margin-left: $grid-gutter
+            a
+                &:hover
+                    text-decoration: underline
+    @include media-breakpoint-up(lg)
+        .menu_burger_only_mobile &
+            li:not(:first-child)
+                margin-left: $grid-gutter * 2
+
     ul
         height: 100%
         margin: 0 $grid-sm-margin * 2
