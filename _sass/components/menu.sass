@@ -38,7 +38,7 @@
         left: 15px
         position: absolute
         transform-origin: center
-        transition: transform 0.38s 0.3s $easeInOutQuad
+        transition: transform 0.28s 0.2s $easeInOutQuad
         width: 20px
     &::after
         transform: translateY(-9px)
@@ -52,7 +52,7 @@
             left: 15px
             position: absolute
             transform-origin: center
-            transition: transform 0.38s $easeInOutQuad
+            transition: transform 0.28s $easeInOutQuad
             width: 20px
         &::after
             transform: rotate(-45deg) scaleX(0)
@@ -60,11 +60,11 @@
             transform: rotate(45deg) scaleX(0)
     &:hover
         &::after
-            animation: 0.5s 0.2s menu-hovered $easeInOutQuad
+            animation: 0.3s 0.14s menu-hovered $easeInOutQuad
         i
-            animation: 0.5s 0.1s menu-hovered $easeInOutQuad
+            animation: 0.3s 0.07s menu-hovered $easeInOutQuad
         &::before
-            animation: 0.5s 0s menu-hovered $easeInOutQuad
+            animation: 0.3s 0s menu-hovered $easeInOutQuad
 
 .menu
     backface-visibility: hidden
@@ -114,14 +114,14 @@
         span
             &::after
                 transform: rotate(-45deg) scaleX(1)
-                transition-delay: 0.25s
+                transition-delay: 0.15s
             &::before
                 transform: rotate(45deg) scaleX(1)
-                transition-delay: 0.35s
+                transition-delay: 0.25s
 
         &::before
             transform: translateY(9px) scaleX(0)
-            transition-delay: 0.2s
+            transition-delay: 0.15s
         i
             transform: scaleX(0)
             transition-delay: 0s
