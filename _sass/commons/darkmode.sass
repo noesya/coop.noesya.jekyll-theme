@@ -81,37 +81,3 @@
         a
             &:hover
                 color: $primary
-
-    main.index
-        section
-            li
-                a
-                    &::after
-                        filter: invert(0)
-    main.team
-        p
-            color: $secondary-reverse
-
-    main.metier
-        article
-            p
-                color: $secondary-reverse
-
-    main.metier
-        article
-            p
-                color: $secondary-reverse
-                .is-menu-opened &
-                    color: $secondary
-
-    main.member
-        header+div
-            background-color: $bg-secondary-color-reverse
-            > section h2+p
-                color: $secondary-on-gray-reverse
-            @include media-breakpoint-up(md)
-                .is-menu-opened &
-                    background-color: $bg-secondary-color
-                span
-                    .is-menu-opened &
-                        color: $secondary
