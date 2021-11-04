@@ -15,3 +15,7 @@
 @mixin media-breakpoint-height-up($height)
     @media (min-height: ($height)) and (min-width: 1200px)
         @content
+
+@mixin media-breakpoint-height-down($height)
+    @media (max-height: ($height)) and (min-width: 1200px)
+        @content
