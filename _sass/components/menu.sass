@@ -102,6 +102,7 @@
                     a
                         color: $primary
             li
+                font-family: $font-family-serif
                 font-size: px2rem(25)
                 margin-bottom: 0
                 &:not(:first-child)
@@ -109,7 +110,8 @@
             a
                 &.active,
                 &:hover
-                    text-decoration: underline
+                    text-decoration: underline 1px
+                    text-underline-offset: 5px
     @include media-breakpoint-up(lg)
         .menu_burger_only_mobile &
             li:not(:first-child)
