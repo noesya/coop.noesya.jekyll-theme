@@ -1,16 +1,45 @@
+{% assign previous = false %}
+{% assign next = false %}
 {% if page.nav %}
-  <nav>
+  {% assign previous = page.nav.previous %}
+  {% assign next = page.nav.next %}
+{% elsif include.auto %}
+  {% assign collection = site[page.collection] %}
+
+  {% for item in collection %}
+    {% if item.title == page.title %}
+      {% unless forloop.first %}
+        {% assign previous = iterator %}
+      {% endunless %}
+      {% unless forloop.last %}
+        {% assign next = collection[forloop.index] %}
+      {% endunless %}
+    {% endif %}
+    {% assign iterator = item %}
+  {% endfor %}
+
+  {% unless previous %}
+    {% assign previous = collection | last %}
+  {% endunless %}
+
+  {% unless next %}
+    {% assign next = collection | first %}
+  {% endunless %}
+{% endif %}
+
+{% if previous and next %}
+<nav>
     <ul>
       <li data-link-delay="3">
-        <a href="{{page.nav.previous.url}}">
-          <span>{{page.nav.previous.title}}</span><br>
-          {{- page.nav.previous.text -}}
+        <a href="{{previous.url}}">
+          <span>{{previous.text | default: 'Précédent'}}</span><br>
+          {{- previous.title -}}
         </a>
       </li>
-      <li  data-link-delay="3">
-        <a href="{{page.nav.next.url}}">
-          <span>{{page.nav.next.title}}</span><br>
-          {{- page.nav.next.text -}}
+      <li data-link-delay="3">
+        <a href="{{next.url}}">
+          <span>{{next.text | default: 'Suivant'}}</span><br>
+          {{- next.title -}}
         </a>
       </li>
     </ul>
