@@ -32,7 +32,7 @@
         right: 35px
         top: 35px
     @include media-breakpoint-up(lg)
-        .menu_burger_only_mobile &
+        .menu-burger-only-mobile &
             display: none
     i, &::after, &::before
         background: $primary
@@ -87,7 +87,7 @@
         width: calc(50vw + min(1040px, calc(100vw - 390px)) / 2)
     @include media-breakpoint-up(lg)
         width: calc(50vw + min(1010px, calc((100vw - 100px) * (10/12) - 110px)) / 2)
-        .menu_burger_only_mobile &
+        .menu-burger-only-mobile &
             background: transparent
             margin-left: auto
             padding-top: 0
@@ -113,7 +113,7 @@
                     text-decoration: underline 1px
                     text-underline-offset: 5px
     @include media-breakpoint-up(lg)
-        .menu_burger_only_mobile &
+        .menu-burger-only-mobile &
             li:not(:first-child)
                 margin-left: $grid-gutter * 2
 
