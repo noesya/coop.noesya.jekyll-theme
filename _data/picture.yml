@@ -1,0 +1,21 @@
+media_queries:
+  mobile: 'max-width: 576px'
+  tablet: 'max-width: 991px'
+  laptop: 'max-width: 1199px'
+  desktop: 'max-width: 1439px'
+  xl_desktop: 'min-width: 1440px'
+
+presets:
+  default:
+    formats: [webp, original]
+    widths: [375, 576, 640, 750, 768, 1080, 1152, 1200, 1366, 1440, 1536, 1920]
+    dimension_attributes: true
+
+  owl_footer:
+    formats: [webp, original]
+    widths: [153, 208, 298, 306, 316, 355, 596]
+    dimension_attributes: true
+    sizes:
+      mobile: 100px
+      tablet: 40vw
+      desktop: 15vw
