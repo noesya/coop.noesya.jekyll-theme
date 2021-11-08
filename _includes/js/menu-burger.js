@@ -11,7 +11,7 @@ window.menu = {
         setTimeout(function () {
             document.body.classList.remove('is-loading');
             window.addEventListener('resize', this.resize.bind(this));
-        }.bind(this), 100);
+        }.bind(this), 300);
     },
     bind: function () {
         'use strict';

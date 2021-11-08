@@ -30,9 +30,11 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-
+      nav_auto: true
+      
 collections:
   pages:
+    sort_by: title
     output: true
 
 plugins:

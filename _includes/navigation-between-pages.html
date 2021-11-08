@@ -3,9 +3,9 @@
 {% if page.nav %}
   {% assign previous = page.nav.previous %}
   {% assign next = page.nav.next %}
-{% elsif include.auto %}
+{% elsif page.nav_auto %}
   {% assign collection = site[page.collection] %}
-
+  
   {% for item in collection %}
     {% if item.title == page.title %}
       {% unless forloop.first %}
