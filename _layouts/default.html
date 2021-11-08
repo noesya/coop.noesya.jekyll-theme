@@ -14,7 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
-  <body class="is-loading">
+  <body>
     {% include header.html %}
     <main aria-label="Content" class="{{ page.class | default: layout.class }}">
       {{ content }}
@@ -23,7 +23,9 @@
     {% include footer.html %}
 
     {% unless site.options.no_js %}
-      <script src="/assets/js/main.js" async defer></script>
+      <script src="/assets/js/main.js"></script>
+    {% else %}
+      <script> // Avoid CSS transitions to be fired on load </script>
     {% endunless %}
   </body>
 </html>

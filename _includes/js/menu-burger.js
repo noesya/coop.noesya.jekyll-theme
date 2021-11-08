@@ -9,7 +9,6 @@ window.menu = {
         this.bind();
 
         setTimeout(function () {
-            document.body.classList.remove('is-loading');
             window.addEventListener('resize', this.resize.bind(this));
         }.bind(this), 300);
     },
