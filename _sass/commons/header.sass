@@ -28,9 +28,10 @@ body > header
             flex-shrink: 0
             font-size: px2rem(25)
             margin-left: $grid-gutter
-            @media (max-width: 350px)
-                font-size: px2rem(20)
+            @include media-breakpoint-down(sm)
+                font-size: px2rem(22)
                 margin-left: $grid-gutter / 2
+                margin-right: 2px
 
         @include media-breakpoint-up(lg)
             width: calc(8.3333% + 9px)
