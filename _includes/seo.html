@@ -4,6 +4,9 @@
 {% endif %}
 {% assign description_seo = page.description | markdownify | strip_html | strip %}
 {% assign image_seo = "/assets/images/share/share.jpg" | prepend: site.url %}
+{% if page.image %}
+  {% assign image_seo = page.image | prepend: site.url %}
+{% endif %}
 
 <!-- HTML Meta Tags -->
 <title>{{ title_seo }}</title>
