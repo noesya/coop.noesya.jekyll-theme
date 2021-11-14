@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name     = "jekyll-theme-noesya"
-  spec.version  = "1.0.37"
+  spec.version  = "1.0.38"
   spec.authors  = ["Sébastien Moulène", "Arnaud Levy", "Alexis BENOIT"]
   spec.email    = ["sebousan@gmail.com", "contact@arnaudlevy.com", "alexis.benoit@noesya.coop"]
 

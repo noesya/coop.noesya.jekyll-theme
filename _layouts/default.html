@@ -31,7 +31,9 @@
       Avoid CSS transitions to be fired on load
     {% endcomment %}
     <script>
-      document.body.classList.remove('is-loading');
+      window.addEventListener('load', function() {
+        document.body.classList.remove('is-loading');
+      });
     </script>
   </body>
 </html>
