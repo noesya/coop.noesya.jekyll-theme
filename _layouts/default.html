@@ -14,12 +14,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/main.css">
 
-    {% comment %}
-      Avoid CSS transitions to be fired on load
-    {% endcomment %}
-    <script> </script>
   </head>
-  <body>
+  <body class="is-loading">
     {% include header.html %}
     <main aria-label="Content" class="{{ page.class | default: layout.class }}">
       {{ content }}
@@ -30,5 +26,12 @@
     {% unless site.options.no_js %}
       <script src="/assets/js/main.js"></script>
     {% endunless %}
+
+    {% comment %}
+      Avoid CSS transitions to be fired on load
+    {% endcomment %}
+    <script>
+      document.body.classList.remove('is-loading');
+    </script>
   </body>
 </html>
