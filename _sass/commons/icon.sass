@@ -1,18 +1,3 @@
-$icons: ("link-blank": "\e90a", "link": "\e90b", "download": "\e90c", "document": "\e90d", "ecologique-thin": "\e900", "economique-thin": "\e902", "ethique-thin": "\e904", "juridique-thin": "\e906", "strategique-thin": "\e908", "securite-thin": "\e90e", "ecologique": "\e901", "economique": "\e903", "ethique": "\e905", "juridique": "\e907", "strategique": "\e909", "securite": "\e90f")
-
-@mixin icon
-    -moz-osx-font-smoothing: grayscale
-    -webkit-font-smoothing: antialiased
-    content: ''
-    display: inline-block
-    font-family: 'icons' !important
-    font-style: normal
-    font-variant: normal
-    font-weight: normal
-    line-height: 1
-    speak: never
-    text-transform: none
-
 @each $name, $glyph in $icons
     .icon--#{$name}
         &::before
