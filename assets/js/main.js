@@ -2,6 +2,8 @@
 layout:
 ---
 
+{% include js/is-webp-supported.js %}
+
 {% include js/menu-burger.js %}
 
 {%- if site.options.notes -%}
