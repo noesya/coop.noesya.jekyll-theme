@@ -59,3 +59,11 @@ aside
         img
             filter: grayscale(0)
             opacity: 1
+
+    @media (prefers-color-scheme: dark)
+        &.is-fixed
+            background: $bg-secondary-color-reverse
+            color: $white
+        &:hover, &.is-hovered
+            a
+                text-decoration-color: $white
