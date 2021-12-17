@@ -28,6 +28,10 @@ body > footer
                 margin-bottom: $grid-gutter
                 &::after
                     content: none
+                &.bcorp
+                    margin-bottom: 0
+                    img
+                        display: block
         &.contacts, &.legal
             li
                 font-size: px2rem(22)
@@ -38,9 +42,12 @@ body > footer
     picture
         display: block
         margin-bottom: $grid-gutter
-        max-width: 33%
+        max-width: 85px
 
-
+    @include media-breakpoint-down(lg)
+        .bcorp
+            float: right
+            margin-top: 22px
     @include media-breakpoint-up(lg)
         nav
             &:first-of-type
@@ -108,3 +115,14 @@ body > footer
             grid-row: 2/2
             margin-bottom: 0
             max-width: none
+    @media (prefers-color-scheme: dark)
+        background-color: $white
+        color: $primary
+        .bcorp img
+            filter: invert(1)
+        li span
+            color: $secondary
+        a
+            color: $secondary-on-gray
+            &:hover
+                color: $primary
