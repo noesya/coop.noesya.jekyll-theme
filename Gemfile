@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
+gem "jekyll", "~> 4.2"
 
 group :jekyll_plugins do
     # https://github.com/rbuchberger/jekyll_picture_tag
@@ -10,3 +10,4 @@ group :jekyll_plugins do
     # https://github.com/jekyll/jekyll-sitemap
     gem 'jekyll-sitemap'
 end
+

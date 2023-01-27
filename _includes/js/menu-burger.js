@@ -5,6 +5,8 @@ window.menu = {
         'use strict';
         this.dom = document.querySelector('#header');
         this.button = this.dom.querySelector('button');
+        this.menu = this.dom.querySelector('.menu');
+        this.links = this.menu.querySelectorAll('a');
 
         this.bind();
 
@@ -18,9 +20,20 @@ window.menu = {
         this.button.addEventListener('click', function () {
             document.documentElement.classList.toggle('is-menu-opened');
             this.isOpened = !this.isOpened;
+            this.toggleMenu();
         }.bind(this));
 
         window.addEventListener('scroll', this.scroll.bind(this));
+    },
+    toggleMenu: function () {
+        'use strict';
+        var i = 0;
+        this.menu.setAttribute('aria-hidden', !this.isOpened);
+
+        for(i = 0; i < this.links.length; i += 1) {
+            this.links[i].setAttribute('tabindex', this.isOpened ? 0 : -1);
+        }
+
     },
     scroll: function () {
         'use strict';

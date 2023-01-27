@@ -1,8 +1,8 @@
-<nav class="menu" aria-label="Navigation principale">
+<nav class="menu" aria-label="Navigation principale" aria-hidden="true">
   <ul>
     {% for item in site.data.menus.primary %}
       <li>
-        <a href="{{ item.url }}"{% if page.url contains item.url %} class="active"{% endif %}>{{ item.title }}</a>
+        <a href="{{ item.url }}" tabindex="-1" {% if page.url contains item.url %} class="active"{% endif %}>{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>
