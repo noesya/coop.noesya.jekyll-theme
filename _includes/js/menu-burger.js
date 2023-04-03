@@ -6,6 +6,7 @@ window.menu = {
         this.dom = document.querySelector('#header');
         this.button = this.dom.querySelector('button');
         this.menu = this.dom.querySelector('.menu');
+        this.footer = document.querySelector('body > footer');
         this.links = this.menu.querySelectorAll('a');
 
         this.bind();
@@ -38,6 +39,12 @@ window.menu = {
     scroll: function () {
         'use strict';
         var y = window.scrollY;
+
+        if (y > window.innerHeight / 2) {
+            this.footer.classList.add('is-visible');
+        } else {
+            this.footer.classList.remove('is-visible');
+        }
 
         if (this.isOpened) {
             return;

@@ -70,6 +70,8 @@ body > footer
         overflow: hidden
         position: fixed
         width: 100%
+        &:not(.is-visible)
+            opacity: 0
         div
             @include grid
             align-items: start
