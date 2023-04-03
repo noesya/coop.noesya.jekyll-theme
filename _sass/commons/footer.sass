@@ -126,3 +126,18 @@ body > footer
             color: $secondary-on-gray
             &:hover
                 color: $primary
+
+    @media screen and (max-height: 700px) and (min-width: 1024px)
+        nav
+            &:first-of-type
+                li
+                    font-size: px2rem(32)
+                    line-height: px2rem(45)
+
+@media screen and (max-height: 620px)
+    body
+        padding-bottom: 0
+        > footer
+            height: auto
+            position: relative
+        
