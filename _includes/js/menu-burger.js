@@ -38,9 +38,10 @@ window.menu = {
     },
     scroll: function () {
         'use strict';
-        var y = window.scrollY;
+        var y = window.scrollY,
+            mainHeight = document.querySelector('main').offsetHeight;
 
-        if (y > window.innerHeight / 2) {
+        if (y > 100 || mainHeight < window.innerHeight) {
             this.footer.classList.add('is-visible');
         } else {
             this.footer.classList.remove('is-visible');
